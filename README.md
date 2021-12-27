@@ -13,8 +13,8 @@ This project is created for getir backend assignment. It's a RESTful API with a 
 
 | Response Body Key | Type | Description  |
 | --- | --- | --- |
-| code | `Number` | `0: Successful request` `1: Failed request caused by users` `2: Failed requests caused by server` |
-| msg | `String` | Custom response message depends on response status |
+| code | `Number` | `0: Successful` `1: Failed caused by a user` `2: Failed caused by a server` |
+| msg | `String` | Description of the code |
 | records | `Array` | An array of matched records  |
 
 ### Records
