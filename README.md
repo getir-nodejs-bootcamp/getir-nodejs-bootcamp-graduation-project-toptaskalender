@@ -4,24 +4,11 @@ This project is created for getir backend assignment. It's a RESTful API with a 
 
 ## API Endpoints
 
-### Notes
-
-- Please keep that in mind, you have to precede all APIs with '`/api/v1`'.
-- There are validations for request payload, please be aware of them.
-
-#### An Example of Response Payload
-
-| Response Body Key | Type | Description  |
-| --- | --- | --- |
-| code | `Number` | `0: Successful` `1: Failed caused by a user` `2: Failed caused by a server` |
-| msg | `String` | Description of the code |
-| records | `Array` | An array of matched records  |
-
 ### Records
 
 | Route | HTTP Verb | Request Body | Header Body | Description |
 | --- | --- | --- | --- | --- |
-| /records | `POST` | `{ "startDate": "2017-11-06", "endDate": "2020-12-30", "minCount": 100, "maxCount": 2000 }` | Empty | Returns resources |
+| /api/v1/records | `POST` | `{ "startDate": "2017-11-06", "endDate": "2020-12-30", "minCount": 100, "maxCount": 2000 }` | Empty | Returns resources |
 
 | Request Body Key | Required | Type | Constraints |
 | --- | --- | --- | --- |
@@ -30,6 +17,13 @@ This project is created for getir backend assignment. It's a RESTful API with a 
 | minCount | `true` | `Number` | `>= 0` |
 | maxCount | `true` | `Number` | `>= minCount` |
 
+### An Example of Response Payload
+
+| Response Body Key | Type | Description  |
+| --- | --- | --- |
+| code | `Number` | `0: Successful` `1: Failed caused by a user` `2: Failed caused by a server` |
+| msg | `String` | Description of the code |
+| records | `Array` | An array of matched records  |
 
 ## .env
 
@@ -61,6 +55,6 @@ Run `npm start` to start the application.
 
 ## Demo
 
-Here is the public URL of the deployed API:
+Here is the public endpoint URL of the deployed API:
 
     http://3.12.83.55:8080/api/v1/records
