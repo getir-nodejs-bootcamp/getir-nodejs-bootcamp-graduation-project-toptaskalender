@@ -13,6 +13,7 @@ const getRecordsSchema = Joi.object({
   endDate: Joi
     .date()
     .iso()
+    .min(Joi.ref('startDate'))
     .required()
     .error(joiErrorHandler),
 
