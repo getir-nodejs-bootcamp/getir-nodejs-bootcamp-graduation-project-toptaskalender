@@ -3,7 +3,9 @@ const {
   joiErrorHandler
 }                 = require('../../utils/functions');
 
+// Joi object by which the request payload will be validated
 const getRecordsSchema = Joi.object({
+// Use joiErrorHandler utility function on every key to change default Joi error messages
   startDate: Joi
     .date()
     .iso()
