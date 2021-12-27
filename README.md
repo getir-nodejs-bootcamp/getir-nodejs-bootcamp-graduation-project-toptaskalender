@@ -7,18 +7,18 @@ This project is created for getir backend assignment. It's a RESTful API with a 
 ### Notes
 
 - Please keep that in mind, you have to precede all APIs with '`/api/v1`'.
-- There are validations for request payload, please be aware for them.
+- There are validations for request payload, please be aware of them.
 
 ### Records
 
 | Route | HTTP Verb | Request Body | Header Body | Description |
 | --- | --- | --- | --- | --- |
-| /records | `POST` | `{ "startDate": "YYYY-MM-DD", "endDate": "YYYY-MM-DD", "minCount": 100, "maxCount": 500 }` | Empty | Returns resources |
+| /records | `POST` | `{ "startDate": "2017-11-06", "endDate": "2020-12-30", "minCount": 100, "maxCount": 2000 }` | Empty | Returns resources |
 
-| Payload key | Required | Type | Constrains |
+| Request Body Key | Required | Type | Constraints |
 | --- | --- | --- | --- |
-| startDate | `true` | `Date` | ISO Date Format |  |
-| endDate | `true` | `Date` | ISO Date Format |
+| startDate | `true` | `String` | ISO Date Format |
+| endDate | `true` | `String` | ISO Date Format |
 | minCount | `true` | `Number` | `>= 0` |
 | maxCount | `true` | `Number` | `>= minCount` |
 
