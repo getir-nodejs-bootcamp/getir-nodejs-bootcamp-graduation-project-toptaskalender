@@ -1,3 +1,8 @@
+/**
+ * @desc An utility function that changes default Joi error messages
+ * @param {array} errors An array of one single object (because of abortEarly set to true by default) that contains metadata about the error.
+ * @returns {array} A modified errors array
+ */
 function joiErrorHandler(errors) {
   console.log('errors => ', errors);
 
