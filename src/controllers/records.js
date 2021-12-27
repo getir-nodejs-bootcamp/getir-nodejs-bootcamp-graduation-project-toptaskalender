@@ -13,8 +13,6 @@ async function getRecords(req, res, next) {
     // Fetch matched records by awaiting the mongoose's aggregate object
     const records = await recordService.findByDateAndTotalCount(filter);
 
-    console.log('records length => ', records.length);
-
     res.status(200).json({
       code: 0,
       msg: 'success',
