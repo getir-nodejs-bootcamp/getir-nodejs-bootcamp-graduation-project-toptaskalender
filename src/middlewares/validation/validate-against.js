@@ -11,8 +11,6 @@ function validateAgainst(schema) {
 
     const { error } = schema.validate(payload);
 
-    console.log('validateAgainst error => ', error);
-    
     if (error) {
       const message = error.details[0].message;
 
