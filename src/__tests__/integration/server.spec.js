@@ -21,6 +21,7 @@ describe('POST requests to /records with', () => {
       minCount: 300,
       maxCount: 2000
     }
+
     test('should respond with a 200 status code', async () => {
       const response = await request(app)
         .post('/records')
@@ -112,5 +113,4 @@ describe('Any requests except POST /records', () => {
     expect(response.body.code).toEqual('1');
     expect(response.body.msg).toBeDefined();
   });
-
 });
