@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(morgan('combined', { stream: requestLogStream }));
 app.use(morgan('dev'));
 
-app.use('/records', recordsRouter);
+app.use('/api/v1/records', recordsRouter);
 
 app.all('*', invalidEndpointHandler);
 app.use(errorHandler);
