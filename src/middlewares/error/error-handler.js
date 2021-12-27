@@ -15,7 +15,7 @@ async function errorHandler(err, req, res, next) {
   } else {
     // If the error is programmer error, use appropriate key values
     res.status(500).json({
-      code: '2',
+      code: 2,
       msg: 'Something went wrong.'
     })
   }

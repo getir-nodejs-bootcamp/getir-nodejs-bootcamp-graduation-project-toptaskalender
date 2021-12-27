@@ -9,7 +9,7 @@ class AppError extends Error {
     // Define the error's status code using incoming statusCode parameter
     this.statusCode     = statusCode;
     // Decide the response's code key by simply looking the status code of the request.
-    this.code           = String(statusCode).startsWith('4') ? '1' : '2';
+    this.code           = String(statusCode).startsWith('4') ? 1 : 2;
   }
 }
 
