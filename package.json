@@ -5,7 +5,9 @@
   "main": "src/server.js",
   "scripts": {
     "start": "nodemon src/server.js",
-    "test": "jest"
+    "test": "jest",
+    "test:integ": "jest -- server.spec.js",
+    "test:unit": "jest -- unit.spec.js"
   },
   "keywords": [],
   "author": "Kalender Toptas <toptaskalender@gmail.com>",
