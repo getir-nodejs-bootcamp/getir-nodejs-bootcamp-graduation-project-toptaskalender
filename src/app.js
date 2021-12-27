@@ -1,6 +1,7 @@
 const express             = require('express');
 const morgan              = require('morgan');
 const helmet              = require('helmet');
+const cors                = require('cors');
 const {
   requestLogStream
 }                         = require('./logs');
@@ -12,6 +13,7 @@ const { recordsRouter }   = require('./routes');
 
 const app                 = express();
 
+app.use(cors({ methods: '*', origin: '*' }));
 app.use(helmet());
 app.use(express.json());
 app.use(morgan('combined', { stream: requestLogStream }));
