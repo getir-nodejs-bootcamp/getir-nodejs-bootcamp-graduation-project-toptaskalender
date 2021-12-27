@@ -15,6 +15,9 @@ function joiErrorHandler(errors) {
       case 'date.format':
         err.message = `${field.label} must contain a date in a 'YYYY-MM-DD' format.`;
         break;
+      case 'date.min':
+        err.message = `${field.label} must be greater than or equal to ${ field.limit.key || field.limit}.`;
+        break;
 
       case 'number.base':
         err.message = `${field.label} must be a type of number.`;
