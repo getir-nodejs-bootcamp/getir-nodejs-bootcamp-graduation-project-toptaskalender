@@ -16,7 +16,7 @@ async function errorHandler(err, req, res, next) {
     // If the error is programmer error, use appropriate key values
     res.status(500).json({
       code: 2,
-      msg: 'Something went wrong.'
+      msg: 'Internal server error.'
     })
   }
 }
