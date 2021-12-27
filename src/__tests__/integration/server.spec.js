@@ -24,7 +24,7 @@ describe('POST requests to /records with', () => {
 
     test('should respond with a 200 status code', async () => {
       const response = await request(app)
-        .post('/records')
+        .post('/api/v1/records')
         .send(requestPayload)
   
       expect(response.statusCode).toBe(200);
@@ -32,7 +32,7 @@ describe('POST requests to /records with', () => {
   
     test('should specify json in the content type header', async () => {
       const response = await request(app)
-        .post('/records')
+        .post('/api/v1/records')
         .send(requestPayload)
   
       expect(response.headers['content-type']).toEqual(expect.stringContaining('json'));
@@ -40,7 +40,7 @@ describe('POST requests to /records with', () => {
   
     test('should have code, msg, and records keys in the response payload', async () => {
       const response = await request(app)
-        .post('/records')
+        .post('/api/v1/records')
         .send(requestPayload)
   
       expect(response.body.code).toEqual(0);
@@ -66,7 +66,7 @@ describe('POST requests to /records with', () => {
 
     test('should respond with a 400 status code', async () => {
       const response = await request(app)
-        .post('/records')
+        .post('/api/v1/records')
         .send(requestPayload)
   
       expect(response.statusCode).toBe(400);
@@ -74,7 +74,7 @@ describe('POST requests to /records with', () => {
 
     test('should specify json in the content type header', async () => {
       const response = await request(app)
-        .post('/records')
+        .post('/api/v1/records')
         .send(requestPayload)
   
       expect(response.headers['content-type']).toEqual(expect.stringContaining('json'));
@@ -82,7 +82,7 @@ describe('POST requests to /records with', () => {
 
     test('should have code and msg keys in the response payload', async () => {
       const response = await request(app)
-        .post('/records')
+        .post('/api/v1/records')
         .send(requestPayload)
   
       expect(response.body.code).toEqual('1');
