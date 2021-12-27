@@ -9,13 +9,13 @@ This project is created for getir backend assignment. It's a RESTful API with a 
 - Please keep that in mind, you have to precede all APIs with '`/api/v1`'.
 - There are validations for request payload, please be aware of them.
 
-#### Response Payload
+#### An Example of Response Payload
 
 | Response Body Key | Type | Description  |
 | --- | --- | --- |
-| code | `Number` | `0: success` `1: Errors caused by users` `2: Errors caused by server` |
-| msg | `String` | Custom message based on response status |
-| records | `Array` | Array containing matched records  |
+| code | `Number` | `0: Successful request` `1: Failed request caused by users` `2: Failed requests caused by server` |
+| msg | `String` | Custom response message depends on response status |
+| records | `Array` | An array of matched records  |
 
 ### Records
 
