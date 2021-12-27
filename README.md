@@ -9,6 +9,14 @@ This project is created for getir backend assignment. It's a RESTful API with a 
 - Please keep that in mind, you have to precede all APIs with '`/api/v1`'.
 - There are validations for request payload, please be aware of them.
 
+#### Response Payload
+
+| Response Body Key | Type | Description  |
+| --- | --- | --- |
+| code | `Number` | `0: success` `1: Errors caused by users` `2: Errors caused by server` |
+| msg | `String` | Custom message based on response status |
+| records | `Array` | Array containing matched records  |
+
 ### Records
 
 | Route | HTTP Verb | Request Body | Header Body | Description |
@@ -18,7 +26,7 @@ This project is created for getir backend assignment. It's a RESTful API with a 
 | Request Body Key | Required | Type | Constraints |
 | --- | --- | --- | --- |
 | startDate | `true` | `String` | ISO Date Format |
-| endDate | `true` | `String` | ISO Date Format |
+| endDate | `true` | `String` | ISO Date Format and `>= startDate` |
 | minCount | `true` | `Number` | `>= 0` |
 | maxCount | `true` | `Number` | `>= minCount` |
 
