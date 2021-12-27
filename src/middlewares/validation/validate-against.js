@@ -11,7 +11,7 @@ function validateAgainst(schema) {
     if (error) {
       const message = error.details[0].message;
 
-      return next(new AppError(404, message));
+      return next(new AppError(400, message));
     }
 
     next();
