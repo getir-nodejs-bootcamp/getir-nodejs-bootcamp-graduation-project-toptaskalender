@@ -4,8 +4,6 @@
  * @returns {array} A modified errors array
  */
 function joiErrorHandler(errors) {
-  console.log('errors => ', errors);
-
   errors.forEach(err => {
     const field   = err.local;
     
