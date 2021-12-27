@@ -10,6 +10,8 @@ This project is created for getir backend assignment. It's a RESTful API with a 
 | --- | --- | --- | --- | --- |
 | /api/v1/records | `POST` | `{ "startDate": "2017-11-06", "endDate": "2020-12-30", "minCount": 100, "maxCount": 2000 }` | Empty | Returns resources |
 
+#### Requirements
+
 | Request Body Key | Required | Type | Constraints |
 | --- | --- | --- | --- |
 | startDate | `true` | `String` | ISO Date Format |
@@ -17,13 +19,32 @@ This project is created for getir backend assignment. It's a RESTful API with a 
 | minCount | `true` | `Number` | `>= 0` |
 | maxCount | `true` | `Number` | `>= minCount` |
 
-### An Example of Response Payload
+#### Structure of Response Payload
 
 | Response Body Key | Type | Description  |
 | --- | --- | --- |
 | code | `Number` | `0: Successful` `1: Failed caused by a user` `2: Failed caused by a server` |
 | msg | `String` | Description of the code |
 | records | `Array` | An array of matched records  |
+
+#### An Example of Successful Response Payload
+
+    {
+        "code": 0,
+        "msg": "success",
+        "records": [
+            {
+                "key": "JHfSsKXZ",
+                "createdAt": "2016-08-04T04:04:11.471Z",
+                "totalCount": 720
+            },
+            {
+                "key": "MBxMfKfv",
+                "createdAt": "2016-02-19T00:51:09.588Z",
+                "totalCount": 712
+            }
+        ]
+    }
 
 ## .env
 
