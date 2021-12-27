@@ -55,4 +55,12 @@ Run `npm start` to start the application.
 
 ## Testing the app
 
-Run `npm run test` to test the application.
+- Run `npm run test` to start all tests.
+- Run `npm run test:integ` to start integration tests.
+- Run `npm run test:unit` to start unit tests.
+
+## Demo
+
+Here is the public URL of the deployed API:
+
+    http://3.12.83.55:8080/api/v1/records
